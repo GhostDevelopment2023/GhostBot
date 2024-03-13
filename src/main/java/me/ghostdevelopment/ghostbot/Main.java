@@ -51,9 +51,9 @@ public class Main extends Logs {
 
 			try {
 
-				log(Level.LOG, "Loaded {0} event.");
+				log(Level.LOG, "Loaded $command event.");
 			} catch (Exception e) {
-				log(Level.ERROR, "Can't load {0} event");
+				log(Level.ERROR, "Can't load $command event");
 			}
 		}
 	}
