@@ -3,7 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-./token
+token
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -38,4 +38,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-token
