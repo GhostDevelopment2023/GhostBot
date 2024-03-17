@@ -1,6 +1,6 @@
 package me.ghostdevelopment.ghostbot;
 
-import me.ghostdevelopment.ghostbot.Events.GhostEvent;
+import me.ghostdevelopment.ghostbot.Commands.iCommand;
 import me.ghostdevelopment.ghostbot.Utils.Color;
 import me.ghostdevelopment.ghostbot.Utils.Logs;
 import net.dv8tion.jda.api.JDA;
@@ -56,8 +56,8 @@ public class Main extends Logs {
 
 	private void registerCommands() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
 		String packageName = getClass().getPackage().getName();
-		for(Class<? extends GhostEvent> clazz: new Reflections(packageName + ".commands.impl").getSubTypesOf(GhostEvent.class)){
-			GhostEvent command = null;
+		for(Class<? extends iCommand> clazz: new Reflections(packageName + ".commands.impl").getSubTypesOf(iCommand.class)){
+			iCommand command = null;
 
 			command = clazz.getDeclaredConstructor().newInstance();
 
