@@ -21,15 +21,21 @@ public class Main extends Logs {
 
 	public static void main(String[] args) {
 
+		if ( Float.parseFloat( System.getProperty( "java.class.version" ) ) < 61.0 )
+		{
+			log(Level.ERROR, Color.RED+"Java version must be 17 or higher.");
+			return;
+		}
+
 		if(args.length!=2 || args[1].isBlank() || args[1].isEmpty()){
-			log(Level.ERROR, "Canno't start discord bot: "+ Color.RED +"Token missing.");
+			log(Level.ERROR, "Can't start discord bot: "+ Color.RED +"Token missing.");
 			return;
 		}
 
 		if(args[0].equalsIgnoreCase("--token") || args[0].equalsIgnoreCase("-t")){
 			TOKEN=args[1];
 		} else {
-			log(Level.ERROR, "java -jar jarname.jar --token <bot token>");
+			log(Level.ERROR, "java -jar jar-name.jar --token <bot token>");
 			return;
 		}
 
@@ -40,7 +46,7 @@ public class Main extends Logs {
 					.addEventListeners(events)
 					.build();
 		}catch (Exception e){
-			log(Level.ERROR, "Canno't start discord bot: "+ Color.RED +"Token not valid.");
+			log(Level.ERROR, "Can't start discord bot: "+ Color.RED +"Token not valid.");
 			return;
 		}
 
@@ -56,7 +62,6 @@ public class Main extends Logs {
 			command = clazz.getDeclaredConstructor().newInstance();
 
 			try {
-
 				log(Level.LOG, "Loaded {0} event.");
 			} catch (Exception e) {
 				log(Level.ERROR, "Can't load {0} event");
