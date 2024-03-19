@@ -39,10 +39,10 @@
                         <index>true</index>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>me.ghostdevelopment.ghostbot.Main</mainClass>
+                            <mainClass>me.ghostdevelopment.ghostbot.BootsTrap</mainClass>
                         </manifest>
                         <manifestEntries>
-                            <main>me.ghostdevelopment.ghostbot.Main</main>
+                            <main>me.ghostdevelopment.ghostbot.BootsTrap</main>
                             <mode>development</mode>
                             <key>value</key>
                         </manifestEntries>

@@ -1,4 +1,4 @@
-package me.ghostdevelopment.ghostbot.Utils;
+package me.ghostdevelopment.ghostbot.main.Utils;
 
 import java.io.File;
 import java.io.FileWriter;

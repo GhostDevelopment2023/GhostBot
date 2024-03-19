@@ -27,10 +27,10 @@
             <index>true</index>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>me.ghostdevelopment.ghostbot.Main</mainClass>
+              <mainClass>me.ghostdevelopment.ghostbot.main.Bot</mainClass>
             </manifest>
             <manifestEntries>
-              <main>me.ghostdevelopment.ghostbot.Main</main>
+              <main>me.ghostdevelopment.ghostbot.main.Bot</main>
               <mode>development</mode>
               <key>value</key>
             </manifestEntries>

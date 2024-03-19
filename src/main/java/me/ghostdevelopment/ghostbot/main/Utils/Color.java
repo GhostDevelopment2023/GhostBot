@@ -1,4 +1,4 @@
-package me.ghostdevelopment.ghostbot.Utils;
+package me.ghostdevelopment.ghostbot.main.Utils;
 
 @SuppressWarnings("unused")
 public enum Color {
